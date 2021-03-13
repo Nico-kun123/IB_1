@@ -25,12 +25,7 @@ QString MainWindow::Code_Decode(QString text, QString newtext)
             newtext += QChar(155 - text[i].unicode());
             else if(text[i] > QChar(96) && text[i] < QChar(123))
                 newtext += QChar(219 - text[i].unicode());
-                /*else if((text[i] > QChar(191) && text[i] < QChar(224)))
-                    newtext += QChar(415 - text[i].unicode());
-                    else if((text[i] > QChar(223) && text[i] < QChar(256)))
-                        newtext += QChar(479 - text[i].unicode());
-                        */
-                        else newtext += text[i];
+                   else newtext += text[i];
 
         i++;
     } while( i!= text.size() );
